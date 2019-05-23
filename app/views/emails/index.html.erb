@@ -1,7 +1,7 @@
 
 <button type="button" class="btn btn-primary btn-lg btn-block" ><%= button_to "RECEVOIR MAIL",  emails_path , remote: true %></button>
 
-<table class="table table-striped">
+<table class="table">
 
   <thead class="thead-dark">
     <tr>
@@ -12,10 +12,18 @@
   <tbody id="email">
 		<% @emails.each do |email| %>
 	<tr>
-		<td><%= email.object%></td>
+		<% @id = email.id%>
+		<div >
+			<td id="<%=@id%>"><%= link_to email.object, email_path(@id), remote: true %></td>
+		</div>
+
 	</tr>
 
   	 	<% end %>
+  </tbody>
+
+
+
   </tbody>
 
 
