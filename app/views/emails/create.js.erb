@@ -1,0 +1,3 @@
+<% @email =  Email.create(object: Faker::Science.element, body: Faker::Address.full_address) %>
+
+document.getElementById("email").insertAdjacentHTML("afterbegin", "<%= j render 'email', email: @email %>" )
