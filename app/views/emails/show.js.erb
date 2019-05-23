@@ -1,8 +1,2 @@
 
-    function removeElement(elementId) {
-        // Removes an element from the document
-        var element = document.getElementById("<%= @current_email_id%>");
-        element.parentNode.removeChild(element);
-    }
-//removeElement(show_email);
 document.getElementById("<%= @current_email_id%>").insertAdjacentHTML("afterend", "<%= j render 'read', read: @current_email %>")

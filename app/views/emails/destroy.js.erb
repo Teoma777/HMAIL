@@ -1,0 +1,5 @@
+<% 		@current_email = Email.find(params[:id]) %>
+//<% @current_email.destroy %>
+
+document.getElementById("<%= @current_email_id%>").destroy
+window.location.reload();

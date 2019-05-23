@@ -16,6 +16,7 @@ class EmailsController < ApplicationController
 end
 
 def show
+
 	@current_email = Email.find(params[:id])
 	@current_email_id = @current_email.id
 		    respond_to do |format|
@@ -23,5 +24,15 @@ def show
       format.js { }
 end
 end
+
+def destroy
+		@current_email = Email.find(params[:id])
+	@current_email_id = @current_email.id
+		    respond_to do |format|
+      format.html {  }
+      format.js { }
+	end
+end
+
 end
 
